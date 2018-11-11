@@ -107,6 +107,11 @@ body {
   font: 15px courier;
 }
 
+#csschange{
+  position:absolute;
+  right: 0;
+}
+
 #CentreBox {
   display: flex;
   flex-direction: column;
