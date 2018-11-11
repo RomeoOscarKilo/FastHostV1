@@ -25,7 +25,7 @@
         <li><a href="../index.php" title="Takes you to the welcome page">Home</a></li>
         <li><a href="RegPage.php" title="Takes you to the registration page">Register</a></li>
         <li><a href="LogPage.php" title="Takes you to the login page">Login </a></li>
-        <li title="This button changes and updates the css file" id="csschange">Ease o acces view</li>
+        <li title="This button changes and updates the css file" id="csschange">Ease of access view</li>
       </ul>
     </nav>
     <div id="CentreBox">
