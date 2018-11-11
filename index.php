@@ -21,6 +21,7 @@
         <li><a href="index.php" title="Takes you to the welcome page">Home</a></li>
         <li><a href="php\RegPage.php" title="Takes you to the registration page">Register</a></li>
         <li><a href="php\LogPage.php" title="Takes you to the login page">Login </a></li>
+        <li title="This button changes anss file" id="csschange">Ease of access</li>
       </ul>
     </nav>
     <div id="MainInfo">

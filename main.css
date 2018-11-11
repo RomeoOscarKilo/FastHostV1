@@ -93,6 +93,10 @@ body {
   color: white;
   text-align: center;
 }
+#csschange{
+  position: absolute;
+  right: 0;
+}
 
 #topmenu {
   border-bottom: 2px solid black;
@@ -100,12 +104,16 @@ body {
   color: white;
 }
 
+
+
 #topmenu li {
   display: inline-block;
   list-style: none;
   padding: 5px;
   font: 15px courier;
 }
+
+
 
 #MainInfo {
   display: flex;
