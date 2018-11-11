@@ -11,7 +11,7 @@
 	<div id="completewrap">
 		<header id="topheader">
 			 <h1 id="mainheader">Welcome to Fasthost
-				 <a href="Welcome_Page.html">
+				 <a href="index.php">
 				 <img id="logo" src="Images/Fathost_logo.png" title="Click to return home" alt="Fasthost logo">
 				 </a>
 			 </h1><!-- -->
@@ -19,9 +19,9 @@
 		</header>
 		<Nav id="topmenu">
 			<ul>
-				<li><a href="Welcome_Page.html" title="Takes you to the welcome page" >Home</a></li>
-				<li><a href="html\Reg_Page.html" title="Takes you to the registration page" >Register</a></li>
-				<li><a href="html\Login_Page.html" title="Takes you to the login page" >Login </a></li>
+				<li><a href="Welcome_Page.php" title="Takes you to the welcome page" >Home</a></li>
+				<li><a href="php\Reg_Page.php" title="Takes you to the registration page" >Register</a></li>
+				<li><a href="php\Login_Page.php" title="Takes you to the login page" >Login </a></li>
 			</ul>
 		</nav>
 		<div id="new_div">
