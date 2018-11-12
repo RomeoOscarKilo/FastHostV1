@@ -3,10 +3,16 @@
 
 <head>
   <meta charset="utf-8" />
-  <title> Fasthost's New TLD </title>
-  <link rel="stylesheet" href="main.css">
+  <title > Fasthost's New TLD </title>
+  <?php
+  $Cookie_Name = "EOA";
+    if ($_COOKIE[$Cookie_Name] == 0) {
+        echo '<link rel="stylesheet" href="main.css">';
+    } elseif ($_COOKIE[$Cookie_Name] == 1) {
+        echo '<link rel="stylesheet" href="no.css">';
+    }?>
+  <script type="text/javascript" src="EaseOfAccess.js"></script>
 </head>
-
 <body>
   <div id="completewrap">
     <header id="topheader">
@@ -21,7 +27,7 @@
         <li><a href="index.php" title="Takes you to the welcome page">Home</a></li>
         <li><a href="php\RegPage.php" title="Takes you to the registration page">Register</a></li>
         <li><a href="php\LogPage.php" title="Takes you to the login page">Login </a></li>
-        <li title="This button changes anss file" id="csschange">Ease of access</li>
+        <li title="This button changes css file" id="csschange"><a href="" id="EaseButton" onclick="EaseCookieMan();"> Ease of access </a> </li>
       </ul>
     </nav>
     <div id="MainInfo">

@@ -97,6 +97,10 @@ body {
   position: absolute;
   right: 0;
 }
+#EaseButton{
+  color: #ffffff;
+  font: 15px Arial;
+}
 
 #topmenu {
   border-bottom: 2px solid black;
