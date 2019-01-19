@@ -15,7 +15,7 @@
     } elseif ($_COOKIE[$Cookie_Name] == 1) {
         echo '<link rel="stylesheet" href="no.css">';
     }?>
-  <script type="text/javascript" src="../EaseOfAccess.js"></script>
+  <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>
 </head>
 <body>
   <div id="completewrap">

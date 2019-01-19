@@ -3,15 +3,16 @@
 
 <head>
   <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
   <title > Fasthost's New TLD </title>
   <?php
   $Cookie_Name = "EOA";
     if ($_COOKIE[$Cookie_Name] == 0) {
         echo '<link rel="stylesheet" href="main.css">';
     } elseif ($_COOKIE[$Cookie_Name] == 1) {
-        echo '<link rel="stylesheet" href="no.css">';
+        echo '<link rel="stylesheet" href="EOA.css">';
     }?>
-  <script type="text/javascript" src="EaseOfAccess.js"></script>
+  <script type="text/javascript" src="/JavaScript/EaseOfAccess.js"></script>
 </head>
 <body>
   <div id="completewrap">

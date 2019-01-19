@@ -8,6 +8,9 @@ html {
   margin: 0px;
 }
 
+
+
+
 h1 {
   font: 20px courier;
   border-bottom: solid 1px black;
@@ -52,8 +55,12 @@ a:visited, a:link {
 }
 
 body {
-  width: 100%;
+/*  width: 100%; */
+  overflow: hidden;
   height: 100%;
+
+
+
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -74,16 +81,20 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+
+
   /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_full_page*/
 }
 
 #completewrap {
   /*Newer Browser support*/
-  max-width: 100%;
+  width: 100%;
   margin: 0px 0px;
   display: flex;
   flex-direction: column;
   flex: 1;
+  overflow-y: scroll;
 }
 
 #topheader {
@@ -125,6 +136,9 @@ body {
   align-self: center;
   max-width: 1000px;
   flex: 1;
+  
+  overflow: auto;
+
 }
 
 #mainsection {

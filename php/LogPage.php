@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title> Fasthost's Login Page </title>
-	
+
 	<link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
 
 	<!-- https://fontawesome.com/get-started/web-fonts-with-css
@@ -19,7 +19,7 @@
 				echo '<link rel="stylesheet" href="no.css">';
 		}?>
 
-  <script type="text/javascript" src="..\EaseOfAccess.js"></script>
+  <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>
 
 
 </head>
