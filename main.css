@@ -55,9 +55,6 @@ body {
 /*  width: 100%; */
   overflow-y: auto;
   height: 100%;
-
-
-
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -78,9 +75,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-
-
   /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_full_page*/
 }
 
@@ -95,9 +89,7 @@ body {
 }
 
 #topheader {
-
   background: linear-gradient(rgba(40, 44, 255, 1) 20%, rgba(20, 22, 127, 1)) 80%;
-
   padding-top: 10px;
   font: 15px courier;
   color: white;
@@ -113,23 +105,16 @@ body {
 }
 
 #topmenu {
-
   border-bottom: 2px solid black;
   background: rgba(20, 22, 127, 1);
   color: white;
 }
-
-
-
 #topmenu li {
   display: inline-block;
   list-style: none;
   padding: 5px;
   font: 15px courier;
 }
-
-
-
 #MainInfo {
   display: flex;
   flex-direction: row;
@@ -137,9 +122,6 @@ body {
   max-width: 1000px;
   flex: 1;
   overflow: auto;
-
-
-
 }
 
 #mainsection {
