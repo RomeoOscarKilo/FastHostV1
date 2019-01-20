@@ -5,7 +5,8 @@
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=0.9">
   <title > Fasthost's New TLD </title>
-  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
   <?php
   $Cookie_Name = "EOA";
     if ($_COOKIE[$Cookie_Name] == 0) {
@@ -28,7 +29,7 @@
       <ul>
         <li><a href="index.php" id="EOATEXT" title="Takes you to the welcome page"><i  class="fas fa-home"></i>Home</a></li>
         <li><a href="php\RegPage.php" id="EOATEXT" title="Takes you to the registration page"><i class="fas fa-user-plus"></i>Register</a></li>
-        <li><a href="php\LogPage.php" id="EOATEXT" title="Takes you to the login page"><i  class="fas fa-sign-in-alt"></i> Login </a></li>
+        <li><a href="php\LogPage.php" id="EOATEXT" title="Takes you to the login page"><i  class="fas fa-sign-in-alt"></i>Login </a></li>
         <li title="This button changes css file" id="csschange"><a href="" id="EOATEXT" id="EaseButton"  onclick="EaseCookieMan();"> Ease of access </a> </li>
       </ul>
     </nav>
