@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Fasthost's Login Page </title>
-  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
   <!-- https://fontawesome.com/get-started/web-fonts-with-css
       https://fontawesome.com/how-to-use/web-fonts-with-css
   -->
