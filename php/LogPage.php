@@ -6,6 +6,7 @@
 	<title> Fasthost's Login Page </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
 
 	<!-- https://fontawesome.com/get-started/web-fonts-with-css
       https://fontawesome.com/how-to-use/web-fonts-with-css
@@ -14,9 +15,9 @@
 	<?php
 	$Cookie_Name = "EOA";
 		if ($_COOKIE[$Cookie_Name] == 0) {
-				echo '<link rel="stylesheet" href="..\css\LogPage.css">';
+				echo '<link rel="stylesheet" href="../css/LogPage.css">';
 		} elseif ($_COOKIE[$Cookie_Name] == 1) {
-				echo '<link rel="stylesheet" href="no.css">';
+				echo '<link rel="stylesheet" href="../css/EOALogPage.css">';
 		}?>
 
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>

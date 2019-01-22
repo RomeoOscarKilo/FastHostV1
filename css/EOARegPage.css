@@ -9,14 +9,18 @@ html {
 }
 
 h1 {
-  font: 20px courier;
-  border-bottom: solid 1px black;
-  padding-bottom: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.05em;
+  border-bottom: solid 0.01em black;
+  padding-bottom: 0.1em;
+  font-size: 1.4em;
 }
 
 h2 {
-  padding-top: 5px;
-  font: 12px courier;
+  padding-top: 0.2em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  font-weight: lighter;
 }
 
 header, section, article, aside, footer, nav, ul, hgroup {
@@ -26,13 +30,18 @@ header, section, article, aside, footer, nav, ul, hgroup {
 img, i {
   display: inline-block;
 }
-
+#EOATEXT{
+color: #FFEC3E;
+}
+li{
+  color:  #FFEC3E;
+}
 article {
   border: 1px solid black;
   padding: 20px;
   margin-bottom: 20px;
   background: radial-gradient(rgba(40, 44, 255, 0.6), rgba(40, 44, 255, 1));
-  color: white;
+  color:  #FFEC3E;
 }
 
 article footer {
@@ -40,7 +49,7 @@ article footer {
 }
 
 ul:hover {
-  background: rgba(56, 56, 56, 1);
+  background: rgba(30, 30, 30, 1);
 }
 
 a:hover {
@@ -48,7 +57,7 @@ a:hover {
 }
 
 a:visited, a:link {
-  color: white;
+  color:  #FFEC3E;
 }
 
 body {
@@ -84,34 +93,34 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
 }
 
 #topheader {
-  background: linear-gradient(rgba(40, 44, 255, 1) 20%, rgba(20, 22, 127, 1)) 80%;
+  background: rgba(45, 45, 45, 5);
   padding-top: 10px;
-  font: 15px courier;
-  color: white;
+  font-family: 'Open Sans', sans-serif;
+  color:  #FFEC3E;
   text-align: center;
 }
 
 #topmenu {
   border-bottom: 2px solid black;
-  background: rgba(20, 22, 127, 1);
-  color: white;
+  background: rgba(45, 45, 45, 5);
+
 }
 
 #topmenu li {
   display: inline-block;
   list-style: none;
   padding: 5px;
-  font: 15px courier;
+  font-family: 'Open Sans', sans-serif;
+
 }
 
 #csschange{
-  position:absolute;
-  right: 0;
+  position: relative;
+
 }
 
 #CentreBox {
@@ -121,27 +130,29 @@ body {
   max-width: 1000px;
   justify-content: center;
   flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
 }
 
-#Loginbox {
+#RegBox {
   border: solid 1px black;
   padding: 200px 400px;
-  background: rgba(70, 70, 70, 0.5);
+  background: rgba(30, 30, 30, 1);
   flex: 1;
 }
 
 h4 {
   text-align: center;
   padding-bottom: 10px;
-  color: white;
-  font: 15px courier;
+  color:  #FFEC3E;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.05em;
   white-space: nowrap;
 }
-#Login {
-  color: white;
-  font: 15px courier;
+
+#Registration {
+  color:  #FFEC3E;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.05em;
   text-align: center;
 }
 
@@ -150,7 +161,7 @@ h4 {
   padding: 20px;
   border-top: 2px solid black;
   background: rgba(1, 1, 1, 0.5);
-  color: white;
+  color:  #FFEC3E;
 }
 
 #logo {
@@ -163,6 +174,9 @@ h4 {
   padding: 15px;
 }
 
+#iconA{
+  padding-right: 5px;
+}
 
 
 /*

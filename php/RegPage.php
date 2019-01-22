@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Fasthost's Login Page </title>
   <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
   <!-- https://fontawesome.com/get-started/web-fonts-with-css
       https://fontawesome.com/how-to-use/web-fonts-with-css
   -->
@@ -14,7 +15,7 @@
     if ($_COOKIE[$Cookie_Name] == 0) {
         echo '<link rel="stylesheet" href="../css/RegPage.css">';
     } elseif ($_COOKIE[$Cookie_Name] == 1) {
-        echo '<link rel="stylesheet" href="no.css">';
+        echo '<link rel="stylesheet" href="../css/EOARegPage.css">';
     }?>
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>
 </head>
@@ -29,9 +30,9 @@
     </header>
     <Nav id="topmenu">
       <ul>
-        <li><a href="../" title="Takes you to the welcome page">Home</a></li>
-        <li><a href="RegPage.php" title="Takes you to the registration page">Register</a></li>
-        <li><a href="LogPage.php" title="Takes you to the login page">Login </a></li>
+        <li><a href="../" title="Takes you to the welcome page"><i id="iconA" class="fas fa-home"></i>Home</a></li>
+        <li><a href="RegPage.php" title="Takes you to the registration page"><i id="iconA" class="fas fa-user-plus"></i>Register</a></li>
+        <li><a href="LogPage.php" title="Takes you to the login page"><i id="iconA" class="fas fa-sign-in-alt"></i>Login </a></li>
           <li title="This button changes css file" id="csschange"><a href="" id="EaseButton" onclick="EaseCookieMan();"> Ease of access </a> </li>
       </ul>
     </nav>
