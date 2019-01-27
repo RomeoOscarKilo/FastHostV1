@@ -18,6 +18,7 @@
         echo '<link rel="stylesheet" href="../css/EOARegPage.css">';
     }?>
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>
+  <script type="text/javascript" src="../JavaScript/AgeValidate.js"></script>
 </head>
 <body>
   <div id="completewrap">
@@ -40,16 +41,20 @@
       <section id="mainsection">
         <div id="RegBox">
           <h4 id="boxtitle">Register an account</h4>
-          <form id="Registration">
-
-            <i id="iconA" class="fas fa-envelope"></i>Email:<input type="email" placeholder="Enter your Email" required>
+          <form name="Registration" id="Registration" onsubmit="return validateForm()" method="post">
+            <i id="iconA" class="fas fa-envelope"></i>Email:<input type="email" name="email" placeholder="Enter your Email" required>
             <br>
-            <i id="iconA" class="fas fa-user"></i>Username:<input type="text" placeholder="Enter your Username" required>
+            <i id="iconA" class="fas fa-user"></i>Username:<input type="text" name="Username" placeholder="Enter your Username" required>
             <br>
-            <i id="iconA" class="fas fa-key"></i>Password: <input type="password" placeholder="Enter your Password" required>
+            <i id="iconA" class="fas fa-sort-numeric-up"></i>Age: <input type="numeric" name="age"placeholder="Enter your Age" required>
             <br>
-            <i id="iconA" class="fas fa-key"></i>Confirm Password: <input type="password" placeholder="Confirm your Password" required>
+            <i id="iconA" class="fas fa-key"></i>Password: <input type="password" name="password" placeholder="Enter your Password" required>
+            <br>
+            <i id="iconA" class="fas fa-key"></i>Confirm Password: <input type="password" name="passwordc" placeholder="Confirm your Password" required>
             <input type="submit" value="Submit">
+            <p id="error" style="color:red;">
+              
+            </p>
           </form>
         </div>
     </div>
