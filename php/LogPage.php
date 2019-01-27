@@ -35,9 +35,9 @@
 		</header>
 		<Nav id="topmenu">
 			<ul>
-				<li><a href="../" title="Takes you to the welcome page">Home</a></li>
-				<li><a href="RegPage.php" title="Takes you to the registration page">Register</a></li>
-				<li><a href="LogPage.php" title="Takes you to the login page">Login </a></li>
+				<li><a href="../" title="Takes you to the welcome page"><i id="iconA" class="fas fa-home"></i>Home</a></li>
+				<li><a href="RegPage.php" title="Takes you to the registration page"><i id="iconA" class="fas fa-user-plus"></i>Register</a></li>
+				<li><a href="LogPage.php" title="Takes you to the login page"><i id="iconA" class="fas fa-sign-in-alt"></i>Login</a></li>
 				<li title="This button changes css file" id="csschange"><a href="" id="EaseButton" onclick="EaseCookieMan();"> Ease of access </a> </li>
 			</ul>
 
@@ -47,10 +47,10 @@
 				<div id="Loginbox">
 					<h4 id="boxtitle">Login to your dashboard</h4>
 					<form id="Login">
-						Username:<br>
-						<i class="fas fa-user"></i> <input type="text" placeholder="Enter your Username" required> Password:
+						
+						 <i id="iconA" class="fas fa-user"></i>Username: <input type="text" placeholder="Enter your Username" required>
 						<br>
-						<i class="fas fa-key"></i> <input type="password" placeholder="Enter your Password" required>
+						<i id="iconA" class="fas fa-key"></i>Password: <input type="password" placeholder="Enter your Password" required>
 						<input type="submit" value="Submit">
 					</form>
 				</div>

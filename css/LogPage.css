@@ -9,14 +9,18 @@ html {
 }
 
 h1 {
-  font: 20px courier;
-  border-bottom: solid 1px black;
-  padding-bottom: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.05em;
+  border-bottom: solid 0.01em black;
+  padding-bottom: 0.1em;
+  font-size: 1.4em;
 }
 
 h2 {
-  padding-top: 5px;
-  font: 12px courier;
+  padding-top: 0.2em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  font-weight: lighter;
 }
 
 header, section, article, aside, footer, nav, ul, hgroup {
@@ -106,12 +110,13 @@ body {
   display: inline-block;
   list-style: none;
   padding: 5px;
-  font: 15px courier;
+  font-family: 'Ubuntu', sans-serif;
+
 }
 
 #csschange{
-  position:absolute;
-  right: 0;
+  position: relative;
+
 }
 
 #CentreBox {
@@ -128,7 +133,7 @@ body {
 #Loginbox {
   border: solid 1px black;
   padding: 200px 400px;
-  background: rgba(70, 70, 70, 0.5);
+  background: rgba(30, 30, 30, 0.8);
   flex: 1;
 }
 
@@ -136,12 +141,12 @@ h4 {
   text-align: center;
   padding-bottom: 10px;
   color: white;
-  font: 15px courier;
+  font-family: 'Open Sans', sans-serif;
   white-space: nowrap;
 }
 #Login {
   color: white;
-  font: 15px courier;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
 
@@ -163,7 +168,9 @@ h4 {
   padding: 15px;
 }
 
-
+#iconA{
+  padding-right: 5px;
+}
 
 /*
 #topmenu ul{
