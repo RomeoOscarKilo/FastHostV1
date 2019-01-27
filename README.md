@@ -1,4 +1,4 @@
-# FastHostV1
+#FastHostV1
 
 Any logo's , promotional content, videos listed below are not mind and belong to www.fasthost.co.uk
 I do not own these and they are used under fair use for education purpose.
@@ -13,5 +13,5 @@ The background image for the main webpage and ease of access portion of the webs
 Links to educational sources are made throughout the code
 
 
-This is the FastHost website
+
 

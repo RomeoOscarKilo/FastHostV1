@@ -9,14 +9,18 @@ html {
 }
 
 h1 {
-  font: 20px courier;
-  border-bottom: solid 1px black;
-  padding-bottom: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.05em;
+  border-bottom: solid 0.01em black;
+  padding-bottom: 0.1em;
+  font-size: 1.4em;
 }
 
 h2 {
-  padding-top: 5px;
-  font: 12px courier;
+  padding-top: 0.2em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  font-weight: lighter;
 }
 
 header, section, article, aside, footer, nav, ul, hgroup {
@@ -52,7 +56,8 @@ a:visited, a:link {
 }
 
 body {
-  width: 100%;
+/*  width: 100%; */
+  overflow-y: auto;
   height: 100%;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
@@ -79,19 +84,29 @@ body {
 
 #completewrap {
   /*Newer Browser support*/
-  max-width: 100%;
+  width: 100%;
   margin: 0px 0px;
   display: flex;
   flex-direction: column;
   flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #topheader {
   background: linear-gradient(rgba(40, 44, 255, 1) 20%, rgba(20, 22, 127, 1)) 80%;
   padding-top: 10px;
-  font: 15px courier;
+
   color: white;
   text-align: center;
+}
+#csschange{
+  position: relative;
+  right: 0;
+}
+#EaseButton{
+  color: #ffffff;
+  font: 15px Arial;
 }
 
 #topmenu {
@@ -99,20 +114,20 @@ body {
   background: rgba(20, 22, 127, 1);
   color: white;
 }
-
 #topmenu li {
   display: inline-block;
   list-style: none;
   padding: 5px;
-  font: 15px courier;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
 }
-
 #MainInfo {
   display: flex;
   flex-direction: row;
   align-self: center;
   max-width: 1000px;
   flex: 1;
+  overflow: auto;
 }
 
 #mainsection {
@@ -151,3 +166,7 @@ body {
   text-align: center; this is for nav bar text to be in the center
 }
 */
+}
+i{
+  padding-right: 5px;
+}
