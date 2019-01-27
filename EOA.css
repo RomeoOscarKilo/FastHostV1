@@ -104,8 +104,8 @@ body {
   text-align: center;
 }
 #csschange{
-  position: absolute;
-  right: 0;
+  position: relative;
+
 }
 #EaseButton{
   color: #ffffff;

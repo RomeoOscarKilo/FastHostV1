@@ -142,6 +142,7 @@ h4 {
   padding-bottom: 10px;
   color: white;
   font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
   white-space: nowrap;
 }
 #Login {

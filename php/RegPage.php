@@ -41,13 +41,14 @@
         <div id="RegBox">
           <h4 id="boxtitle">Register an account</h4>
           <form id="Registration">
-            Email:<br>
-            <i class="fas fa-envelope"></i> <input type="email" placeholder="Enter your Email" required> Username:
+
+            <i id="iconA" class="fas fa-envelope"></i>Email:<input type="email" placeholder="Enter your Email" required>
             <br>
-            <i class="fas fa-user"></i> <input type="text" placeholder="Enter your Username" required> Password:
+            <i id="iconA" class="fas fa-user"></i>Username:<input type="text" placeholder="Enter your Username" required>
             <br>
-            <i class="fas fa-key"></i> <input type="password" placeholder="Enter your Password" required> Confirm Your Password<br>
-            <i class="fas fa-key"></i> <input type="password" placeholder="Confirm your Password" required>
+            <i id="iconA" class="fas fa-key"></i>Password: <input type="password" placeholder="Enter your Password" required>
+            <br>
+            <i id="iconA" class="fas fa-key"></i>Confirm Password: <input type="password" placeholder="Confirm your Password" required>
             <input type="submit" value="Submit">
           </form>
         </div>
