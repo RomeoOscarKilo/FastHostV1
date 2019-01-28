@@ -2,7 +2,7 @@
 
 
 
-<form name="Registration" id="Registration" onsubmit="return validateForm()" method="post" action="registration.php">
+<form name="Registration" id="Registration"  method="POST" action="registration.php">
   <i id="iconA" class="fas fa-envelope"></i>Email:<input type="text" name="email" placeholder="Enter your Email" value="<?php if($prevent == "0"){echo $email;}?>" required>
   <br>
   <i id="iconA" class="fas fa-user"></i>Username:<input type="text" name="username" placeholder="Enter your Username" value="<?php if($prevent == "0"){echo $username;}?>" required>
