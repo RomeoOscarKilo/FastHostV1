@@ -25,7 +25,7 @@ if($validation->is_empty_null($username) == "true"){
 }
 
 if($validation->is_empty_null($age) == "true"){
-  $error = "Please inculde an aeg";
+  $error = "Please inculde an age";
   fail_validate();
 }
 
