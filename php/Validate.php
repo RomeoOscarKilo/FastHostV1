@@ -21,12 +21,15 @@ class validation{
     function is_empty_null($data){
       if(empty($data))
       {
-        return true;
+        return "true";
       }else{
-        return false;
+        return "false";
       }
-
     }
+
+
+
+
 
 
 

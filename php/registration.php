@@ -8,10 +8,35 @@ $age = $validation->html_secure_input($_POST["age"]);
 $password = $validation->html_secure_input($_POST["password"]);
 $passwordc = $validation->html_secure_input($_POST["passwordc"]);
 
+
 if ($validation->email_validate($email) == "false"){
   $error = "Email is invalid";
   fail_validate();
 }
+
+if($validation->is_empty_null($email) == "true"){
+  $error = "Please inculde an email";
+  fail_validate();
+}
+
+if($validation->is_empty_null($username) == "true"){
+  $error = "Please inculde a username";
+  fail_validate();
+}
+
+if($validation->is_empty_null($age) == "true"){
+  $error = "Please inculde an aeg";
+  fail_validate();
+}
+
+if($validation->is_empty_null($password) == "true"){
+  $error = "Please inculde a password";
+  fail_validate();
+}
+
+
+
+
 
 ?>
 
