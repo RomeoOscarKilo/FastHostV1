@@ -1,22 +1,20 @@
 <!doctype html>
 <html lang="en">
 <?php
+require "Validate.php";
+$validation = new validation();
 $prevent = "1";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $email = secure_input($_POST["email"]);
-  $username = secure_input($_POST["username"]);
-  $age = secure_input($_POST["age"]);
-  $password = secure_input($_POST["password"]);
-  $passwordc = secure_input($_POST["passwordc"]);
+  $email = $validation->html_secure_input($_POST["email"]);
+  $username = $validation->html_secure_input($_POST["username"]);
+  $age = $validation->html_secure_input($_POST["age"]);
+  $password = $validation->html_secure_input($_POST["password"]);
+  $passwordc = $validation->html_secure_input($_POST["passwordc"]);
+  $error = $validation->html_secure_input($_POST["error"]);
   $prevent = "0";
 
 }
-  function secure_input($data){
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-    }
+
   ?>
 
 <head>
@@ -71,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <i id="iconA" class="fas fa-key"></i>Confirm Password: <input type="password" name="passwordc" placeholder="Confirm your Password" required>
             <input type="submit" value="Submit">
             <p id="error" style="color:red;">
-
+              <?php echo $error;?>
             </p>
           </form>
         </div>
