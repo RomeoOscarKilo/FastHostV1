@@ -16,17 +16,18 @@ echo "Connected successfully";
 
 
 
+$test = "' ; DROP TABLE users -- -";
+$sql = "INSERT INTO users (email , username , password) VALUES ('$test' , 'alllyboi' , 'yolo') ";
 
-$sql = "INSERT INTO users (email , username , password) VALUES ('alex@seddon.com' , 'alllyboi' , 'yolo') ";
 
 
+echo " " . $test . " ";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
 
 
 
