@@ -44,7 +44,7 @@
           <form name="Registration" id="Registration" onsubmit="return validateForm()" method="post">
             <i id="iconA" class="fas fa-envelope"></i>Email:<input type="email" name="email" placeholder="Enter your Email" required>
             <br>
-            <i id="iconA" class="fas fa-user"></i>Username:<input type="text" name="Username" placeholder="Enter your Username" required>
+            <i id="iconA" class="fas fa-user"></i>Username:<input type="text" name="username" placeholder="Enter your Username" required>
             <br>
             <i id="iconA" class="fas fa-sort-numeric-up"></i>Age: <input type="numeric" name="age"placeholder="Enter your Age" required>
             <br>
@@ -53,7 +53,7 @@
             <i id="iconA" class="fas fa-key"></i>Confirm Password: <input type="password" name="passwordc" placeholder="Confirm your Password" required>
             <input type="submit" value="Submit">
             <p id="error" style="color:red;">
-              
+
             </p>
           </form>
         </div>

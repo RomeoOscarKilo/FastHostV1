@@ -17,8 +17,8 @@ function validateForm(){
     response = "Password is too short";
     document.getElementById("error").innerHTML=response;
     return false;}
-    username = document.forms["Registration"]["username"].value; //no 2 letter usernames
-    if (username.length < 3 || username.length > 20 ){
-      response = "Username is too short";
-      document.getElementById("error").innerHTML=response;
-      return false;}}
+  var username = document.forms["Registration"]["username"].value; //no 2 letter usernames
+  if (username.length < 3 || username.length > 20 ){
+    response = "Username must be between 3 and 20 chars";
+    document.getElementById("error").innerHTML=response;
+    return false;}}
