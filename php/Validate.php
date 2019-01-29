@@ -13,8 +13,8 @@ class validation{
     function email_validate($email){
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
           $emailErr = "Invalid email format";
-          return "false";
-        }else{ return "true";}}
+          return "true";
+        }else{ return "false";}}
 
 
 
@@ -28,10 +28,34 @@ class validation{
     }
 
 
+    function must_Match($pass1 , $pass2){
+      if($pass1 == $pass2)
+      {
+        return "false";
+      }else {
+        return "true";
+      }
+
+    }
+
+    function age_valid($data){
+      if((18 <= $value) && ($value <= 99)){
+        return "true";
+      }else { return "false";}
+    }
+
+    function check_user($data){
+      if(strlen($data) < 3){
+        return "true";
+      }else {return "false";}
+    }
 
 
+    function check_pass_length($data){
+      if(strlen($data) < 5){
+        return "true";
+      }else return "false";
 
-
-
+    }
 
 }?>
