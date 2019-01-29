@@ -4,15 +4,21 @@
 
 class user{
 
+public $filepath = "../password";
+public $servername = "localhost";
+public $username = "phpmyadmin";
+public $dbname = "fasthost_customers";
+
+public function GetFilePass(){
+  $mypass = fopen($this->filepath , "r" ) or die("Unable to Open File");
+  return substr(fread($mypass,filesize("../password")) , 0, 11);
+    fclose($mypass);
+}
+
 function checkIfEmailExists($inputEmail){
-  $servername = "localhost";
-  $username = "phpmyadmin";
-  $filepath = "../password";
-  $dbname = "fasthost_customers";
-  $mypass = fopen($filepath , "r" ) or die("Unable to Open File");
-  $password = substr(fread($mypass,filesize("../password")) , 0, 11);
-  fclose($mypass);
-  $conn = new mysqli($servername, $username, $password , $dbname);
+
+  $password = $this->GetFilePass();
+  $conn = new mysqli($this->servername, $this->username, $password , $this->dbname);
   $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
   $stmt->bind_param("s" , $inputEmail );
   $stmt->execute();
@@ -26,14 +32,8 @@ function checkIfEmailExists($inputEmail){
 }
 
 function checkIfUsernameExists($inputUsername){
-  $servername = "localhost";
-  $username = "phpmyadmin";
-  $filepath = "../password";
-  $dbname = "fasthost_customers";
-  $mypass = fopen($filepath , "r" ) or die("Unable to Open File");
-  $password = substr(fread($mypass,filesize("../password")) , 0, 11);
-  fclose($mypass);
-  $conn = new mysqli($servername, $username, $password , $dbname);
+  $password = $this->GetFilePass();
+  $conn = new mysqli($this->servername, $this->username, $password , $this->dbname);
   $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
   $stmt->bind_param("s" , $inputUsername );
   $stmt->execute();
@@ -46,14 +46,8 @@ function checkIfUsernameExists($inputUsername){
 }
 
 function addUser($iUsername , $iEmail , $iPass){
-  $servername = "localhost";
-  $username = "phpmyadmin";
-  $filepath = "../password";
-  $dbname = "fasthost_customers";
-  $mypass = fopen($filepath , "r" ) or die("Unable to Open File");
-  $password = substr(fread($mypass,filesize("../password")) , 0, 11);
-  fclose($mypass);
-  $conn = new mysqli($servername, $username, $password , $dbname);
+  $password = $this->GetFilePass();
+  $conn = new mysqli($this->servername, $this->username, $password , $this->dbname);
   $stmt = $conn->prepare("INSERT INTO users (email , username , password) VALUES (? , ? , ?) ");
   $stmt->bind_param("sss" , $iUsername , $iEmail , $iPass );
   $stmt->execute();
