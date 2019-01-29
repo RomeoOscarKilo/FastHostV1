@@ -41,7 +41,8 @@ $passwordc = $validation->html_secure_input($_POST["passwordc"]);
 
             //can safley now add user to the database
             $user->addUser($email , $username , $user->passwordSalt($password) );
-            echo $user->passwordSalt($password);
+            header("Location: LogPage.php?registered=1");
+            die();
           }
 
 

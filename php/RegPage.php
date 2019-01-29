@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <?php
 require "Validate.php";
@@ -20,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Fasthost's Login Page </title>
+  <title> Fasthost's Registration Page </title>
   <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
   <!-- https://fontawesome.com/get-started/web-fonts-with-css
@@ -32,7 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<link rel="stylesheet" href="../css/RegPage.css">';
     } elseif ($_COOKIE[$Cookie_Name] == 1) {
         echo '<link rel="stylesheet" href="../css/EOARegPage.css">';
-    }?>
+    }
+    ?>
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>
   <script type="text/javascript" src="../JavaScript/AgeValidate.js"></script>
 </head>

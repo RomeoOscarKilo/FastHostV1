@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en">
 
+<?php if ($_SERVER["REQUEST_METHOD"] == "GET") {
+	$registered = $_GET["registered"];
+	if($registered == "1"){
+		echo '<script>alert("successfully registered");</script>';
+	}
+}
+?>
+
 <head>
 	<meta charset="utf-8" />
 	<title> Fasthost's Login Page </title>
@@ -21,6 +29,7 @@
 		}?>
 
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>
+
 
 
 </head>
@@ -47,7 +56,7 @@
 				<div id="Loginbox">
 					<h4 id="boxtitle">Login to your dashboard</h4>
 					<form id="Login">
-						
+
 						 <i id="iconA" class="fas fa-user"></i>Username: <input type="text" placeholder="Enter your Username" required>
 						<br>
 						<i id="iconA" class="fas fa-key"></i>Password: <input type="password" placeholder="Enter your Password" required>

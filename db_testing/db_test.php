@@ -24,11 +24,11 @@ $sql = "INSERT INTO users (email , username , password) VALUES ('$test' , 'allly
 
 echo " " . $test . " ";
 
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+//if ($conn->query($sql) === TRUE) {
+//    echo "New record created successfully";
+//} else {
+//    echo "Error: " . $sql . "<br>" . $conn->error;
+//}
 echo "<br>";
 $sql = "SELECT * FROM users ";
 

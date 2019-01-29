@@ -58,13 +58,7 @@ function addUser($iUsername , $iEmail , $iPass){
   $stmt->bind_param("sss" , $iUsername , $iEmail , $iPass );
   $stmt->execute();
   $conn->close();
-
-
-
-
 }
-
-
 
 function passwordSalt($passtohash){
   $passtohash = password_hash($passtohash , PASSWORD_DEFAULT);
