@@ -4,14 +4,6 @@
 
 class user{
 
-
-
-
-
-
-
-
-
 function checkIfEmailExists($inputEmail){
   $servername = "localhost";
   $username = "phpmyadmin";
@@ -33,8 +25,6 @@ function checkIfEmailExists($inputEmail){
 
 }
 
-
-
 function checkIfUsernameExists($inputUsername){
   $servername = "localhost";
   $username = "phpmyadmin";
@@ -54,8 +44,6 @@ function checkIfUsernameExists($inputUsername){
   } else{return "notexist";}
   $conn->close();
 }
-
-
 
 function addUser($iUsername , $iEmail , $iPass){
   $servername = "localhost";
