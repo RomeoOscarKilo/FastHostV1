@@ -8,32 +8,36 @@ $validation = new validation();
 
 $username = $validation->html_secure_input($_POST["username"]);
 $password = $validation->html_secure_input($_POST["password"]);
+$token = $_POST["csrf"];
 
 
 
-echo "1";
-if(($validation->is_empty_null($username) == "true") || ($validation->is_empty_null($password) == "true")){
-  $error = "Please include a username";
-  fail_login();
-}else{ echo "2";
-  if($user->checkIfUsernameExists($username) == "notexist"){
-    $error = "This user does not exist";
+if(strcmp($token , $_SESSION["token"]) == 0){
+  if(($validation->is_empty_null($username) == "true") || ($validation->is_empty_null($password) == "true")){
+    $error = "Please include a username";
     fail_login();
-  }else{
-    if(password_verify($password , $user->getUserPassHash($username))){
-      echo "yes!";
-      $_SESSION["auth"] = "yes";
-      $_SESSION["username"] = $username;
-      header("Location: loltest.php");
-      die();
-
-    }else{
-      $error = "The password is incorrect";
+  }else{ echo "2";
+    if($user->checkIfUsernameExists($username) == "notexist"){
+      $error = "This user does not exist";
       fail_login();
+    }else{
+      if(password_verify($password , $user->getUserPassHash($username))){
+        $_SESSION["auth"] = "yes";
+        $_SESSION["username"] = $username;
+        header("Location: loltest.php");
+        die();
+      }else{
+        $error = "The password is incorrect";
+        fail_login();
+      }
     }
-
   }
+}else {
+  $error = "CSRF ERROR";
+  fail_login();
 }
+
+
 
 
 ?>

@@ -4,6 +4,8 @@
 session_start();
 require "Validate.php";
 $validation = new validation();
+$length = 32;
+$_SESSION['token'] = substr(base_convert(sha1(uniqid(mt_rand())), 16, 36), 0, $length);
 if(isset($_SESSION["JustReg"])){
 	$error = "Your account was created, please login";
 	unset($_SESSION["JustReg"]);
@@ -67,6 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						 <i id="iconA" class="fas fa-user"></i>Username: <input type="text" placeholder="Enter your Username" name="username" required>
 						<br>
 						<i id="iconA" class="fas fa-key"></i>Password: <input type="password" placeholder="Enter your Password" name="password" required>
+						<input type="hidden" name="csrf" value="<?php echo $_SESSION['token']?>">
 						<input type="submit" value="Submit">
 						<p id="error" style="color:red;">
 							<?php echo $error;?>

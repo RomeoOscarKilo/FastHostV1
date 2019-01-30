@@ -29,7 +29,7 @@ class validation{
 
 
     function must_Match($pass1 , $pass2){
-      if($pass1 == $pass2)
+      if($pass1 === $pass2)
       {
         return "false";
       }else {

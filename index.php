@@ -5,6 +5,8 @@
 <head>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=0.9">
+<script src="JavaScript/jQuery/jquery-3.3.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <title > Fasthost's New TLD </title>
   <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
@@ -35,7 +37,7 @@
         <li><a href="php\RegPage.php" id="EOATEXT" title="Takes you to the registration page"><i class="fas fa-user-plus"></i>Register</a></li>
         <li><a href="php\LogPage.php" id="EOATEXT" title="Takes you to the login page"><i  class="fas fa-sign-in-alt"></i>Login </a></li>
         <li title="This button changes css file" id="csschange"><a href="" id="EOATEXT" id="EaseButton"  onclick="EaseCookieMan();"> Ease of access </a> </li>
-        <?php if($_SESSION["auth"] == "yes") {echo '<li><a href="" >You are logged in as ' . $_SESSION["username"] . '</a></li> ' . '<li><a href="logout.php" title="Logs you out">Log out</a></li>';}?>
+        <?php if($_SESSION["auth"] == "yes") {echo '<li><a href="" >You are logged in as ' . $_SESSION["username"] . '</a></li> ' . '<li><a href="/php/logout.php" title="Logs you out">Log out</a></li>';}?>
       </ul>
     </nav>
     <div id="MainInfo">
