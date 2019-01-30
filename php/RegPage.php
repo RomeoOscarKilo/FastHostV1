@@ -2,6 +2,7 @@
 
 <html lang="en">
 <?php
+session_start();
 require "Validate.php";
 $validation = new validation();
 $prevent = "1";
@@ -30,9 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <?php
   $Cookie_Name = "EOA";
     if ($_COOKIE[$Cookie_Name] == 0) {
-        echo '<link rel="stylesheet" href="../css/RegPage.css">';
-    } elseif ($_COOKIE[$Cookie_Name] == 1) {
         echo '<link rel="stylesheet" href="../css/EOARegPage.css">';
+
+    } else {
+        echo '<link rel="stylesheet" href="../css/RegPage.css">';
     }
     ?>
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>
@@ -52,7 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <li><a href="../" title="Takes you to the welcome page"><i id="iconA" class="fas fa-home"></i>Home</a></li>
         <li><a href="RegPage.php" title="Takes you to the registration page"><i id="iconA" class="fas fa-user-plus"></i>Register</a></li>
         <li><a href="LogPage.php" title="Takes you to the login page"><i id="iconA" class="fas fa-sign-in-alt"></i>Login </a></li>
-          <li title="This button changes css file" id="csschange"><a href="" id="EaseButton" onclick="EaseCookieMan();"> Ease of access </a> </li>
+        <li title="This button changes css file" id="csschange"><a href="" id="EaseButton" onclick="EaseCookieMan();"> Ease of access </a> </li>
+        <?php if($_SESSION["auth"] == "yes") {echo '<li><a href="" >You are logged in as ' . $_SESSION["username"] . '</a></li> ' . '<li><a href="logout.php" title="Logs you out">Log out</a></li>';}?>
       </ul>
     </nav>
     <div id="CentreBox">

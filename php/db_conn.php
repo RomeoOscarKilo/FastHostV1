@@ -54,6 +54,26 @@ function addUser($iUsername , $iEmail , $iPass){
   $conn->close();
 }
 
+function getUserPassHash($iUsername){
+  $password = $this->GetFilePass();
+  $conn = new mysqli($this->servername, $this->username, $password , $this->dbname);
+  $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+  $stmt->bind_param("s" , $iUsername);
+  $stmt->execute();
+  $result = $stmt->get_result();
+  $hashResult = $result->fetch_object();
+  return $hashResult->password;
+  $conn->close();
+
+}
+
+
+
+
+
+
+
+
 function passwordSalt($passtohash){
   $passtohash = password_hash($passtohash , PASSWORD_DEFAULT);
   return $passtohash;

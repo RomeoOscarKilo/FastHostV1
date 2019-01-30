@@ -39,7 +39,16 @@ if($results->num_rows > 0) {
         echo "email: " . $row["email"]. " || Username: " . $row["username"]. " || Password: " . $row["password"]. "<br>";
     }
 }
-  echo " " . "successfully";
+  echo " " . "successfully" . "<br>";
+
+  $iUsername = "Glegan";
+  $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+  $stmt->bind_param("s" , $iUsername);
+  $stmt->execute();
+  $result = $stmt->get_result();
+  $hashResult = $result->fetch_object();
+  echo $hashResult->password;
+  $conn->close();
 
 
 

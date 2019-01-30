@@ -1,14 +1,20 @@
-<!doctype html>
-<html lang="en">
 
-<?php if ($_SERVER["REQUEST_METHOD"] == "GET") {
-	$registered = $_GET["registered"];
-	if($registered == "1"){
-		echo '<script>alert("successfully registered");</script>';
-	}
+
+<?php
+session_start();
+require "Validate.php";
+$validation = new validation();
+if(isset($_SESSION["JustReg"])){
+	$error = "Your account was created, please login";
+	unset($_SESSION["JustReg"]);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$error =  $validation->html_secure_input($_POST["error"]);
 }
 ?>
-
+<!doctype html>
+<html lang="en">
 <head>
 	<meta charset="utf-8" />
 	<title> Fasthost's Login Page </title>
@@ -22,11 +28,12 @@
 
 	<?php
 	$Cookie_Name = "EOA";
-		if ($_COOKIE[$Cookie_Name] == 0) {
-				echo '<link rel="stylesheet" href="../css/LogPage.css">';
-		} elseif ($_COOKIE[$Cookie_Name] == 1) {
-				echo '<link rel="stylesheet" href="../css/EOALogPage.css">';
-		}?>
+	if ($_COOKIE[$Cookie_Name] == 0) {
+			echo '<link rel="stylesheet" href="../css/EOALogPage.css">';
+	} else {
+			echo '<link rel="stylesheet" href="../css/LogPage.css">';
+	}
+		?>
 
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>
 
@@ -48,6 +55,7 @@
 				<li><a href="RegPage.php" title="Takes you to the registration page"><i id="iconA" class="fas fa-user-plus"></i>Register</a></li>
 				<li><a href="LogPage.php" title="Takes you to the login page"><i id="iconA" class="fas fa-sign-in-alt"></i>Login</a></li>
 				<li title="This button changes css file" id="csschange"><a href="" id="EaseButton" onclick="EaseCookieMan();"> Ease of access </a> </li>
+        <?php if($_SESSION["auth"] == "yes") {echo '<li><a href="" >You are logged in as ' . $_SESSION["username"] . '</a></li> ' . '<li><a href="logout.php" title="Logs you out">Log out</a></li>';}?>
 			</ul>
 
 		</nav>
@@ -55,12 +63,14 @@
 			<section id="mainsection">
 				<div id="Loginbox">
 					<h4 id="boxtitle">Login to your dashboard</h4>
-					<form id="Login">
-
-						 <i id="iconA" class="fas fa-user"></i>Username: <input type="text" placeholder="Enter your Username" required>
+					<form id="Login" action="login.php" method="post">
+						 <i id="iconA" class="fas fa-user"></i>Username: <input type="text" placeholder="Enter your Username" name="username" required>
 						<br>
-						<i id="iconA" class="fas fa-key"></i>Password: <input type="password" placeholder="Enter your Password" required>
+						<i id="iconA" class="fas fa-key"></i>Password: <input type="password" placeholder="Enter your Password" name="password" required>
 						<input type="submit" value="Submit">
+						<p id="error" style="color:red;">
+							<?php echo $error;?>
+						</p>
 					</form>
 				</div>
 		</div>

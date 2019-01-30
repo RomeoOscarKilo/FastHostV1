@@ -1,5 +1,6 @@
 <!doctype html>
 <?php
+session_start();
 require "Validate.php";
 require "db_conn.php";
 $user = new user();
@@ -41,7 +42,8 @@ $passwordc = $validation->html_secure_input($_POST["passwordc"]);
 
             //can safley now add user to the database
             $user->addUser($email , $username , $user->passwordSalt($password) );
-            header("Location: LogPage.php?registered=1");
+            $_SESSION["JustReg"] = "yes";
+            header("Location: LogPage.php?");
             die();
           }
 

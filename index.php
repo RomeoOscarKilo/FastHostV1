@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!doctype html>
 <html lang="en">
 
@@ -10,10 +11,13 @@
   <?php
   $Cookie_Name = "EOA";
     if ($_COOKIE[$Cookie_Name] == 0) {
-        echo '<link rel="stylesheet" href="main.css">';
-    } elseif ($_COOKIE[$Cookie_Name] == 1) {
         echo '<link rel="stylesheet" href="EOA.css">';
-    }?>
+
+    } else {
+
+        echo '<link rel="stylesheet" href="main.css">';
+    }
+    ?>
   <script type="text/javascript" src="/JavaScript/EaseOfAccess.js"></script>
 </head>
 <body>
@@ -31,6 +35,7 @@
         <li><a href="php\RegPage.php" id="EOATEXT" title="Takes you to the registration page"><i class="fas fa-user-plus"></i>Register</a></li>
         <li><a href="php\LogPage.php" id="EOATEXT" title="Takes you to the login page"><i  class="fas fa-sign-in-alt"></i>Login </a></li>
         <li title="This button changes css file" id="csschange"><a href="" id="EOATEXT" id="EaseButton"  onclick="EaseCookieMan();"> Ease of access </a> </li>
+        <?php if($_SESSION["auth"] == "yes") {echo '<li><a href="" >You are logged in as ' . $_SESSION["username"] . '</a></li> ' . '<li><a href="logout.php" title="Logs you out">Log out</a></li>';}?>
       </ul>
     </nav>
     <div id="MainInfo">
