@@ -18,3 +18,17 @@ function EaseCookieMan() {
   }
   document.location.reload(true)
 }
+
+
+
+function EaseCookieManNew(){
+
+
+
+if(Cookies.get("EOA") === "" || Cookies.get("EOA") === "0"){
+  Cookies.set("EOA" , "1" , {expires: 365});
+}else if (Cookies.get("EOA") === "1") {
+  Cookies.set("EOA", "0" , {expires: 356});
+}
+document.location.reload(true);
+}

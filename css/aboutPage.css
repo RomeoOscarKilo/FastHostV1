@@ -1,0 +1,231 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100%;
+  margin: 0px;
+}
+
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.05em;
+  border-bottom: solid 0.01em black;
+  padding-bottom: 0.1em;
+  font-size: 1.4em;
+}
+
+h2 {
+  padding-top: 0.2em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  font-weight: lighter;
+}
+
+header, section, article, aside, footer, nav, ul, hgroup {
+  display: block;
+}
+
+img, i {
+  display: inline-block;
+}
+
+article {
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: radial-gradient(rgba(40, 44, 255, 0.6), rgba(40, 44, 255, 1));
+  color: white;
+}
+
+article footer {
+  text-align: right;
+}
+
+ul:hover {
+  background: rgba(56, 56, 56, 1);
+}
+
+a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+a:visited, a:link {
+  color: white;
+}
+
+body {
+  overflow-y: auto;
+  height: 100%;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  /*
+  https://css-tricks.com/old-flexbox-and-new-flexbox/
+  https://css-tricks.com/using-flexbox/
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  */
+  justify-content: center;
+  background-image: url("../Images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_full_page*/
+}
+
+#completewrap {
+  /*Newer Browser support*/
+  width: 100%;
+  margin: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#topheader {
+  background: linear-gradient(rgba(40, 44, 255, 1) 20%, rgba(20, 22, 127, 1)) 80%;
+  padding-top: 10px;
+  font: 15px courier;
+  color: white;
+  text-align: center;
+}
+
+#topmenu {
+  border-bottom: 2px solid black;
+  background: rgba(20, 22, 127, 1);
+  color: white;
+}
+
+#topmenu li {
+  display: inline-block;
+  list-style: none;
+  padding: 5px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#csschange{
+  position: relative;
+
+}
+
+#CentreBox {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-width: 2000px;
+  justify-content: center;
+  flex: 1;
+  overflow: auto;
+}
+
+
+#SlideshowContainer {
+
+  padding: 200px 400px;
+
+  flex: 1;
+
+}
+
+h4 {
+  text-align: center;
+  padding-bottom: 10px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  white-space: nowrap;
+}
+
+#Registration {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+#footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid black;
+  background: rgba(1, 1, 1, 0.5);
+  color: white;
+}
+
+#logo {
+  vertical-align: middle;
+  align-self: bottom;
+}
+
+#news {
+  border: solid 1px black;
+  padding: 15px;
+}
+
+#iconA{
+  padding-right: 5px;
+}
+/*
+#topmenu ul{
+  text-align: center; this is for nav bar text to be in the center
+}
+*/
+#team1{
+  justify-content: center;
+  display: block;
+  margin: auto;
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+  background-color: rgba(20, 22, 127, 1);
+  color: white;
+  border: 1px solid white;
+
+}
+
+#team2{
+
+  padding: 10px;
+  background-color: rgba(20, 22, 127, 1);
+  color: white;
+  border: 1px solid white;
+  text-align: center;
+
+}
+#team3{
+
+  padding: 10px;
+  background-color: rgba(20, 22, 127, 1);
+  color: white;
+  border: 1px solid white;
+  text-align: center;
+
+}
+
+
+#teamimage2 , #teamimage , #teamimage3{
+  justify-content: center;
+  display: block;
+  margin: auto;
+  text-align: center;
+  flex: 1;
+
+
+
+}
+.imagetext{
+padding: 10px;
+border: 1px solid white;
+background-color: rgba(40, 44, 255, 0.6);
+color: white;
+
+
+
+}
