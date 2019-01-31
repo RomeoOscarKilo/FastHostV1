@@ -21,8 +21,5 @@ $(document).ready(function(){
   });
   $("#teamimage3").click(function(){$("#pane3").fadeToggle("slow");
   });
-
 }
-
-
 );
