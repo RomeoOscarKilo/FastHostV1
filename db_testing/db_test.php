@@ -1,4 +1,18 @@
 <?php
+session_start();
+if ($_SESSION["auth"] == "yes"){
+echo "ok";
+}else{
+  echo "redirect";
+  header("Location: ../php/LogPage.php");
+}
+
+
+
+
+
+
+
 $servername = "localhost";
 $username = "phpmyadmin";
 $filepath = "../password";

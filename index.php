@@ -27,7 +27,7 @@
 <body>
   <div id="completewrap">
     <header id="topheader">
-      <h1 id="EOATEXT" id="mainheader" >Welcome to Fasthost
+      <h1 id="EOATEXT"  >Welcome to Fasthost
         <a href="index.php">
           <img id="logo" src="Images/Fathost_logo.png" title="Click to return home" alt="Fasthost logo">
         </a>
@@ -36,9 +36,10 @@
     <Nav id="topmenu">
       <ul>
         <li><a href="index.php" id="EOATEXT" title="Takes you to the welcome page"><i  class="fas fa-home"></i>Home</a></li>
-        <li><a href="php\RegPage.php" id="EOATEXT" title="Takes you to the registration page"><i class="fas fa-user-plus"></i>Register</a></li>
-        <li><a href="php\LogPage.php" id="EOATEXT" title="Takes you to the login page"><i  class="fas fa-sign-in-alt"></i>Login </a></li>
-        <li title="This button changes css file" id="csschange"><a href="" id="EOATEXT" id="EaseButton"  onclick="EaseCookieManNew();"> Ease of access </a> </li>
+        <li><a href="php/RegPage.php" id="EOATEXT" title="Takes you to the registration page"><i class="fas fa-user-plus"></i>Register</a></li>
+        <li><a href="php/LogPage.php" id="EOATEXT" title="Takes you to the login page"><i  class="fas fa-sign-in-alt"></i>Login </a></li>
+        <li><a href="php/AboutPage.php" title="Takes you to the login page">About</a></li>
+        <li title="This button changes css file" id="csschange"><a href="" id="EOATEXT"   onclick="EaseCookieManNew();"> Ease of access </a> </li>
         <?php if($_SESSION["auth"] == "yes") {echo '<li><a href="" >You are logged in as ' . $_SESSION["username"] . '</a></li> ' . '<li><a href="/php/logout.php" title="Logs you out">Log out</a></li>';}?>
       </ul>
     </nav>
