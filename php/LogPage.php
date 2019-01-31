@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<li><a href="RegPage.php" title="Takes you to the registration page"><i id="iconA" class="fas fa-user-plus"></i>Register</a></li>
 				<li><a href="LogPage.php" title="Takes you to the login page"><i id="iconA" class="fas fa-sign-in-alt"></i>Login</a></li>
 				<li><a href="AboutPage.php" title="Takes you to the login page">About</a></li>
-				<li title="This button changes css file" id="csschange"><a href="" id="EaseButton" onclick="EaseCookieMan();"> Ease of access </a> </li>
+				<li title="This button changes css file" id="csschange"><a href="" id="EaseButton" onclick="EaseCookieManNew();"> Ease of access </a> </li>
         <?php if($_SESSION["auth"] == "yes") {echo '<li><a href="" >You are logged in as ' . $_SESSION["username"] . '</a></li> ' . '<li><a href="logout.php" title="Logs you out">Log out</a></li>';}?>
 			</ul>
 
