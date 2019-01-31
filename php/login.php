@@ -22,6 +22,7 @@ if(strcmp($token , $_SESSION["token"]) == 0){
       fail_login();
     }else{
       if(password_verify($password , $user->getUserPassHash($username))){
+        session_regenerate_id();
         $_SESSION["auth"] = "yes";
         $_SESSION["username"] = $username;
         header("Location: loltest.php");
