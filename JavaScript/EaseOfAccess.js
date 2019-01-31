@@ -2,6 +2,7 @@ function EaseCookieMan() {
 
   var allcookie = document.cookie;
   cookiearray = allcookie.split(';');
+  var value;
   for (var i = 0; i < cookiearray.length; i++) {
     value = cookiearray[i].split('=')[1];
   }
@@ -13,7 +14,7 @@ function EaseCookieMan() {
   } else if (value == "1") {
     document.cookie = "EOA=0;" + "expires=" + now.toUTCString() + ";" + "path=/;"
   } else {
-    document.cookie = "EOA=1;" + "expires=" + now.toUTCString() + ";" + "path=/;"
+    document.cookie = "EOA=0;" + "expires=" + now.toUTCString() + ";" + "path=/;"
   }
   document.location.reload(true)
 }
