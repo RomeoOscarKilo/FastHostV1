@@ -10,6 +10,10 @@ if(isset($_SESSION["JustReg"])){
 	$error = "Your account was created, please login";
 	unset($_SESSION["JustReg"]);
 }
+if(isset($_SESSION["error"])){
+	$error = $_SESSION["error"];
+	unset($_SESSION["error"]);
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$error =  $validation->html_secure_input($_POST["error"]);
