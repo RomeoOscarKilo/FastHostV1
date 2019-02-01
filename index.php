@@ -40,7 +40,7 @@
         <li><a href="php/LogPage.php" id="EOATEXT" title="Takes you to the login page"><i  class="fas fa-sign-in-alt"></i>Login </a></li>
         <li><a href="php/AboutPage.php" title="Takes you to the login page">About</a></li>
         <li title="This button changes css file" id="csschange"><a href="" id="EOATEXT"   onclick="EaseCookieManNew();"> Ease of access </a> </li>
-        <?php if($_SESSION["auth"] == "yes") {echo '<li><a href="" >You are logged in as ' . $_SESSION["username"] . '</a></li> ' . '<li><a href="/php/logout.php" title="Logs you out">Log out</a></li>';}?>
+        <?php if($_SESSION["auth"] == "yes") {echo '<li><a href="php/user.php" >You are logged in as ' . $_SESSION["username"] . '</a></li> ' . '<li><a href="/php/logout.php" title="Logs you out">Log out</a></li>';}?>
       </ul>
     </nav>
     <div id="MainInfo">

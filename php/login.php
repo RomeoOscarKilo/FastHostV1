@@ -25,7 +25,7 @@ if(strcmp($token , $_SESSION["token"]) == 0){
         session_regenerate_id();
         $_SESSION["auth"] = "yes";
         $_SESSION["username"] = $username;
-        header("Location: loltest.php");
+        header("Location: user.php");
         die();
       }else{
         $error = "The password is incorrect";
