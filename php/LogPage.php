@@ -2,6 +2,7 @@
 
 <?php
 session_start();
+$_SESSION["siteuser"] = "yes";
 require "Validate.php";
 $validation = new validation();
 $length = 32;
@@ -36,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	<?php
 	$Cookie_Name = "EOA";
-	if ($_COOKIE[$Cookie_Name] == 0) {
+	if ($_COOKIE[$Cookie_Name] === 0) {
 			echo '<link rel="stylesheet" href="../css/EOALogPage.css">';
 	} else {
 			echo '<link rel="stylesheet" href="../css/LogPage.css">';

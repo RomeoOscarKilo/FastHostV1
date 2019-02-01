@@ -4,6 +4,11 @@ require "Validate.php";
 require "db_conn.php";
 $user = new user();
 $validation = new validation();
+if($_SESSION["siteuser"] === "yes"){
+  //Means only this site can use the php file
+}else{
+  die("NotSelfWebsite"); // prevents other webpages using this php file
+}
 
 
 $username = $validation->html_secure_input($_POST["username"]);

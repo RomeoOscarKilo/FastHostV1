@@ -1,6 +1,11 @@
 <?php
 //here we create connection,  setup an insert
-
+session_start();
+if($_SESSION["siteuser"] === "yes"){
+  //Means only this site can use the php file
+}else{
+  die("NotSelfWebsite"); // prevents other webpages using this php file
+}
 
 class user{
 
@@ -45,14 +50,28 @@ function checkIfUsernameExists($inputUsername){
   $conn->close();
 }
 
-function addUser($iUsername , $iEmail , $iPass){
+function addUser( $iEmail , $iUsername  , $iPass){
   $password = $this->GetFilePass();
   $conn = new mysqli($this->servername, $this->username, $password , $this->dbname);
   $stmt = $conn->prepare("INSERT INTO users (email , username , password) VALUES (? , ? , ?) ");
-  $stmt->bind_param("sss" , $iUsername , $iEmail , $iPass );
+  $stmt->bind_param("sss" , $iEmail , $iUsername , $iPass );
   $stmt->execute();
   $conn->close();
 }
+
+
+
+function addInterest($iEmail , $iUsername){
+
+  $password = $this->GetFilePass();
+  $conn = new mysqli($this->servername, $this->username, $password , $this->dbname);
+  $stmt = $conn->prepare("INSERT INTO registered_interest (email , username) VALUES (? , ?) ");
+  $stmt->bind_param("ss" , $iUsername , $iEmail);
+  $stmt->execute();
+  $conn->close();
+}
+
+
 
 function getUserPassHash($iUsername){
   $password = $this->GetFilePass();
@@ -70,7 +89,18 @@ function getUserPassHash($iUsername){
 
 
 
+function getUserToEmail($iUsername){
+  $password = $this->GetFilePass();
+  $conn = new mysqli($this->servername, $this->username, $password , $this->dbname);
+  $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+  $stmt->bind_param("s" , $iUsername);
+  $stmt->execute();
+  $result = $stmt->get_result();
+  $actualEmail = $result->fetch_object();
+  return $actualEmail->email;
+  $conn->close();
 
+}
 
 
 

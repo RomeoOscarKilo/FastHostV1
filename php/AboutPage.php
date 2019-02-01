@@ -3,6 +3,7 @@
 <html lang="en">
 <?php
 session_start();
+$_SESSION["siteuser"] = "yes";
   ?>
 
 
@@ -23,7 +24,7 @@ session_start();
   -->
   <?php
   $Cookie_Name = "EOA";
-    if ($_COOKIE[$Cookie_Name] == 0) {
+    if ($_COOKIE[$Cookie_Name] === 0) {
         echo '<link rel="stylesheet" href="../css/EOARegPage.css">';
 
     } else {

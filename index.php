@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php session_start();
+$_SESSION["siteuser"] = "yes";
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -14,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
   <?php
   $Cookie_Name = "EOA";
-    if ($_COOKIE[$Cookie_Name] == 0) {
+    if ($_COOKIE[$Cookie_Name] === 0) {
         echo '<link rel="stylesheet" href="EOA.css">';
 
     } else {

@@ -1,6 +1,12 @@
 <!doctype html>
 <?php
 session_start();
+if($_SESSION["siteuser"] === "yes"){
+  //Means only this site can use the php file
+}else{
+  die("NotSelfWebsite"); // prevents other webpages using this php file
+}
+
 require "Validate.php";
 require "db_conn.php";
 $user = new user();

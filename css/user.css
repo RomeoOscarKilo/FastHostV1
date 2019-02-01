@@ -182,3 +182,17 @@ body {
 i{
   padding-right: 5px;
 }
+
+#reginterest ,{
+  width: 100%;
+}
+
+
+
+.submit{
+  background-color: rgba(56, 56, 56, 1);
+  color: white;
+  border: 1px solid rgba(56, 56, 56, 1);
+  font-size: 1em;
+  padding: 1px;
+}
