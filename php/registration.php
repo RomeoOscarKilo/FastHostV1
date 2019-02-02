@@ -20,17 +20,17 @@ $passwordc = $validation->html_secure_input($_POST["passwordc"]);
 
 
   if(($validation->is_empty_null($username) == "true") || ($validation->check_user($username) == "true")  ){
-    $error = "Please inculde a valid username";
+    $error = "Please inculde a valid username above 3 chars";
     fail_validate();
   }else {
 
     if(($validation->is_empty_null($age) == "true") || ($validation->age_valid($age) == "true") ){
-      $error = "Please inculde a valid age";
+      $error = "Please inculde a valid age above 18";
       fail_validate();
     }else{
 
       if(($validation->is_empty_null($password) == "true") || ($validation->check_pass_length($password) == "true")  ){
-        $error = "Please inculde a valid password";
+        $error = "Please inculde a valid password that is more than 5 chars";
         fail_validate();
       }else{
         if (($validation->email_validate($email) == "true") || ($validation->is_empty_null($email) == "true")){

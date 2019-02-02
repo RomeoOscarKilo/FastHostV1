@@ -87,6 +87,15 @@ function getUserPassHash($iUsername){
 }
 
 
+function changeUserPass($iPass , $iUsername){
+  $password = $this->GetFilePass();
+  $conn = new mysqli($this->servername, $this->username, $password , $this->dbname);
+  $stmt = $conn->prepare("UPDATE users SET password=? WHERE username=? ");
+  $stmt->bind_param("ss" , $iPass , $iUsername);
+  $stmt->execute();
+  $conn->close();
+}
+
 
 
 function getUserToEmail($iUsername){

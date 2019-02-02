@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION["auth"] == "yes"){
+if ($_SESSION["auth"] === "yes"){
 echo "ok";
 }else{
   echo "redirect";
