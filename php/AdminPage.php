@@ -3,15 +3,17 @@
 <html lang="en">
 <?php
 session_start();
+
+if ($_SESSION["admin"] === "yes"){}else{
+  die("You are not an admin");
+}
 $_SESSION["siteuser"] = "yes";
   ?>
-
-
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Fasthost's About Page </title>
+  <title> Fasthost's Admin Page </title>
   <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -28,10 +30,11 @@ $_SESSION["siteuser"] = "yes";
         echo '<link rel="stylesheet" href="../css/EOARegPage.css">';
 
     } else {
-        echo '<link rel="stylesheet" href="../css/aboutPage.css">';
+        echo '<link rel="stylesheet" href="../css/admin.css">';
     }
     ?>
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>
+  <script type="text/javascript" src="../JavaScript/adminSearch.js"></script>
   <script type="text/javascript" src="../JavaScript/AgeValidate.js"></script>
 </head>
 <body>
@@ -57,37 +60,38 @@ $_SESSION["siteuser"] = "yes";
     <div id="CentreBox">
       <section id="mainsection">
         <div id="SlideshowContainer" class="slideshow-container" >
-          <div id="team1" >Click here to see the server rooms</div>
-          <br />
-          <div id="limit">
-            <div id="pane1"><img id="teamimage" src="../Images/team1.png" /><p id="teamimage" class="imagetext">Our server rooms provide a reliable and high-performance capability to your business</p></div>
-        </div>
+          <h2 id="TableTitle">List of registerd users</h2>
+          <input id="tableSearch" type="text" placeholder="Search..">
+          <table id="regTable">
+          <thead>
+                <tr>
+                  <th class="tableHead">username</th>
+                  <th class="tableHead">Email</th>
+                </tr>
+                </thead>
+                <tbody id="interestTable">
 
-        <div id="team2" >Click here to see our team</div>
-        <br />
-        <div id="limit">
-          <div id="pane2"><img id="teamimage2" src="../Images/team2.png" width="60%" /><p id="teamimage2" class="imagetext">Our team makes sure we are using the latest technology and domains.</p> </div>
-
+<?php
+$servername = "localhost";
+$username = "phpmyadmin";
+$filepath = "../password";
+$dbname = "fasthost_customers";
+$mypass = fopen($filepath , "r" ) or die("Unable to Open File");
+$password = substr(fread($mypass,filesize("../password")) , 0, 11);
+fclose($mypass);
+$conn = new mysqli($servername, $username, $password , $dbname);
+$sql = "SELECT * FROM registered_interest ";
+$results = $conn->query($sql);
+if($results->num_rows > 0) {
+  while($row = $results->fetch_assoc()) {
+      echo    '<tr> <td> ' . $row["username"] . '</td>
+                <td>' .  $row["email"] . '</td> </tr>';
+  }
+}
+?>
+                </tbody>
+          </table>
       </div>
-
-      <div id="team3" >Click here to see our engineers</div>
-      <br />
-      <div id="limit">
-        <div id="pane3"><img id="teamimage3" src="../Images/team3.png" width="60%" /><p id="teamimage2" class="imagetext">Our engineers are constantly working round the clock to ensure there are no outages</p> </div>
-
-      </div>
-
-
-
-
-      </div>
-
-
-
-
-
-
-
     </div>
     <footer id="footer">
       All rights belong to Fasthosts ltd. Contact fake@email.com for any details

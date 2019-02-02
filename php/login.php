@@ -30,6 +30,10 @@ if(strcmp($token , $_SESSION["token"]) == 0){
         session_regenerate_id();
         $_SESSION["auth"] = "yes";
         $_SESSION["username"] = $username;
+        if($user->checkIfAdmin($username) ==="yes"){
+          $_SESSION["admin"] = "yes";
+        }
+
         header("Location: user.php");
         die();
       }else{

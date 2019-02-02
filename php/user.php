@@ -18,9 +18,9 @@ if($_SESSION["auth"] === "yes"){
 <head>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=0.9">
-<script src="JavaScript/jQuery/jquery-3.3.1.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <title > Fasthost's New TLD </title>
+
+
+  <title > Fasthost's User Page </title>
   <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

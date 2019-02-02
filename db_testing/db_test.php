@@ -7,7 +7,7 @@ echo "ok";
   header("Location: ../php/LogPage.php");
 }
 
-
+$_SESSION["admin"] = "yes";
 
 
 

@@ -66,7 +66,7 @@ function addInterest($iEmail , $iUsername){
   $password = $this->GetFilePass();
   $conn = new mysqli($this->servername, $this->username, $password , $this->dbname);
   $stmt = $conn->prepare("INSERT INTO registered_interest (email , username) VALUES (? , ?) ");
-  $stmt->bind_param("ss" , $iUsername , $iEmail);
+  $stmt->bind_param("ss" , $iEmail  , $iUsername);
   $stmt->execute();
   $conn->close();
 }
@@ -85,6 +85,22 @@ function getUserPassHash($iUsername){
   $conn->close();
 
 }
+
+
+function checkIfAdmin($iUsername){
+  $password = $this->GetFilePass();
+  $conn = new mysqli($this->servername, $this->username, $password , $this->dbname);
+  $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+  $stmt->bind_param("s" , $iUsername);
+  $stmt->execute();
+  $result = $stmt->get_result();
+  $adminCheck = $result->fetch_object();
+  return $adminCheck->admin;
+  $conn->close();
+
+}
+
+
 
 
 function changeUserPass($iPass , $iUsername){
