@@ -112,6 +112,20 @@ function getUserToEmail($iUsername){
 }
 
 
+function checkIfInterest($iEmail){
+  $password = $this->GetFilePass();
+  $conn = new mysqli($this->servername, $this->username, $password , $this->dbname);
+  $stmt = $conn->prepare("SELECT * FROM registered_interest WHERE email = ?");
+  $stmt->bind_param("s" , $iEmail );
+  $stmt->execute();
+  $result = $stmt->get_result();
+  $retEmail = $result->fetch_object();
+  if(strcmp($retEmail , $iEmail) == 0){
+    return "exist";
+  } else{return "notexist";}
+  $conn->close();
+}
+
 
 function passwordSalt($passtohash){
   $passtohash = password_hash($passtohash , PASSWORD_DEFAULT);

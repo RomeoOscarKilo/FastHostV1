@@ -2,7 +2,8 @@
 session_start(); //for secure php session
 $_SESSION["siteuser"] = "yes";
 session_regenerate_id(); //prevents session fixation attacks
-
+require "db_conn.php";
+$user = new user();
 if($_SESSION["auth"] === "yes"){
 
 }else {
@@ -60,14 +61,14 @@ if($_SESSION["auth"] === "yes"){
         <article>
           <header>
             <hgroup>
-              <h1 id="EOATEXT" id="Firstpost">Sign up to show interest in our brand new Top Level Domains</h1>
+              <h1 id="EOATEXT" id="Firstpost"><?php if ($user->checkIfInterest($_SESSION["username"]) === "exist"){ echo "You have already registerd an interest";}else{echo "Sign up to show interest in our brand new Top Level Domains";} ?></h1>
               <h2>Please enter your email to register an interest</h2>
             </hgroup>
           </header>
           <p id="EOATEXT"></p>
-          <form id="reginterest" action="domainRegister.php" method="post">
+<?php    if ($user->checkIfInterest($_SESSION["username"]) === "exist"){echo "You Have already registerd an interest, please check your emails regularly for further information";}else echo '<form id="reginterest" action="domainRegister.php" method="post">
             <input class="submit" type="submit"  value="Submit">
-            <input class="submit" id="regemail" type="email" name="email" placeholder="Email" />
+            <input class="submit" id="regemail" type="email" name="email" placeholder="Email" />'; ?>
             <p>You will be notified of any new Top level domains that are released.</p>
             <p  style="color:#FFCA00;"> <?php echo $_SESSION["regInError"]; unset($_SESSION["regInError"]);?></p>
           </form>
