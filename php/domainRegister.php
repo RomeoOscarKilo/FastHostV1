@@ -5,16 +5,12 @@ if($_SESSION["siteuser"] === "yes"){
 }else{
   die("NotSelfWebsite"); // prevents other webpages using this php file
 }
-
-
-
 require "Validate.php";
 require "db_conn.php";
 $user = new user();
 $validation = new validation();
 $email = $validation->html_secure_input($_POST["email"]);
 if(strcmp($email , $user->getUserToEmail($_SESSION["username"])) === 0 ){
-
 $user->addInterest($email , $_SESSION["username"]);
 $_SESSION["regInError"] = "You have succsesfully registerd";
 header("Location: user.php");
@@ -22,17 +18,4 @@ header("Location: user.php");
   $_SESSION["regInError"] = "The email was not for this acount";
   header("Location: user.php");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>

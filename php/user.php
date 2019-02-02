@@ -67,12 +67,10 @@ if($_SESSION["auth"] === "yes"){
           <p id="EOATEXT"></p>
           <form id="reginterest" action="domainRegister.php" method="post">
             <input class="submit" type="submit"  value="Submit">
-            <input calss="submit" id="regemail" type="email" name="email" placeholder="Email" />
+            <input class="submit" id="regemail" type="email" name="email" placeholder="Email" />
             <p>You will be notified of any new Top level domains that are released.</p>
-            <p  style="color:red;"> <?php echo $_SESSION["regInError"];    unset($_SESSION["regInError"]);  ?>      </p>
-
+            <p  style="color:#FFCA00;"> <?php echo $_SESSION["regInError"]; unset($_SESSION["regInError"]);?></p>
           </form>
-
           <footer>
             <p>You agree for us to send emails to you</p>
           </footer>
@@ -80,11 +78,22 @@ if($_SESSION["auth"] === "yes"){
         <article>
           <header>
             <hgroup>
-              <h1 id="EOATEXT">New login and registration page's!</h1>
-              <h2>Secure and safe login for all users</h2>
+              <h1 id="EOATEXT">Change your password</h1>
+              <h2>Here you can update your password </h2>
             </hgroup>
           </header>
-          <p id="EOATEXT">We have deployed and optimised a new login and registration page for users looking to control and explore our new product</p>
+          <form id="changePass" action="changePass.php" method="post">
+
+            Old Password:<input class="submit" id="oldPass" type="password" name="oldPassword" placeholder="Old Password" />
+            <br />
+            Password: <input class="submit" id="Pass" type="password" name="newPassword" placeholder="New Password" />
+            <br/>
+            Confirm Password<input class="submit" id="newPass" type="password" name="newPasswordC" placeholder="Confirm New Password" />
+            <br />
+            <input class="submit" type="submit"  value="Submit">
+            <p>You will be notified of any new Top level domains that are released.</p>
+            <p  style="color:#FFCA00;"> <?php echo $_SESSION["ChangePassError"]; unset($_SESSION["ChangePassError"]);?></p>
+          </form>
           <footer>
             <p>Coming soon, to fasthosts product line</p>
           </footer>
