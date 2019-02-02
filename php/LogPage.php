@@ -36,12 +36,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   -->
 
 	<?php
+
 	$Cookie_Name = "EOA";
-	if ($_COOKIE[$Cookie_Name] === 0) {
-			echo '<link rel="stylesheet" href="../css/EOALogPage.css">';
-	} else {
-			echo '<link rel="stylesheet" href="../css/LogPage.css">';
-	}
+    if ($_COOKIE[$Cookie_Name] === "1") {
+        echo '<link rel="stylesheet" href="EOA.css">';
+
+    } else {
+
+        echo '<link rel="stylesheet" href="main.css">';
+    }
 		?>
 
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>

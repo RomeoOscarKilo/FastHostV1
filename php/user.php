@@ -26,13 +26,14 @@ if($_SESSION["auth"] === "yes"){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
   <?php
+
   $Cookie_Name = "EOA";
-    if ($_COOKIE[$Cookie_Name] === 0) {
+    if ($_COOKIE[$Cookie_Name] === "1") {
         echo '<link rel="stylesheet" href="EOA.css">';
 
     } else {
 
-        echo '<link rel="stylesheet" href="../css/user.css">';
+        echo '<link rel="stylesheet" href="main.css">';
     }
     ?>
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>

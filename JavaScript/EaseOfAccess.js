@@ -24,11 +24,12 @@ function EaseCookieMan() {
 function EaseCookieManNew(){
 
 
+if(Cookies.get("EOA") === "1"){
+    Cookies.set("EOA", "0" , {expires: 356});
 
-if(Cookies.get("EOA") === "" || Cookies.get("EOA") === "0"){
+}else {
   Cookies.set("EOA" , "1" , {expires: 365});
-}else if (Cookies.get("EOA") === "1") {
-  Cookies.set("EOA", "0" , {expires: 356});
 }
-document.location.reload(true);
+
+document.location.reload(true)
 }

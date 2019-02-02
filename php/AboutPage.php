@@ -24,11 +24,12 @@ $_SESSION["siteuser"] = "yes";
   -->
   <?php
   $Cookie_Name = "EOA";
-    if ($_COOKIE[$Cookie_Name] === 0) {
-        echo '<link rel="stylesheet" href="../css/EOARegPage.css">';
+    if ($_COOKIE[$Cookie_Name] === "1") {
+        echo '<link rel="stylesheet" href="EOA.css">';
 
     } else {
-        echo '<link rel="stylesheet" href="../css/aboutPage.css">';
+
+        echo '<link rel="stylesheet" href="main.css">';
     }
     ?>
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>
