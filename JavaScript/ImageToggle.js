@@ -19,7 +19,8 @@ $(document).ready(function(){
   $("#teamimage2").click(function(){
     $("#pane2").fadeToggle("slow");
   });
-  $("#teamimage3").click(function(){$("#pane3").fadeToggle("slow");
+  $("#teamimage3").click(function(){
+    $("#pane3").fadeToggle("slow");
   });
 }
 );

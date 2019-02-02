@@ -103,11 +103,14 @@ if($_SESSION["auth"] === "yes"){
         <article>
           <header>
             <hgroup>
-              <h1 id="EOATEXT">New login and registration page's!</h1>
-              <h2>Secure and safe login for all users</h2>
+              <h1 id="EOATEXT">We are here to provide you the best service possibke</h1>
+              <h2>So contact us!</h2>
             </hgroup>
           </header>
-          <p id="EOATEXT">We have deployed and optimised a new login and registration page for users looking to control and explore our new product</p>
+          <p id="EOATEXT">We have 24/7 356 day support to cover all your needs and problems, You matter to us as a customer and as a business so we want to keep your users, visters and customers flinding your websites with easy domains.</p>
+
+
+
           <footer>
             <p>Coming soon, to fasthosts product line</p>
           </footer>
