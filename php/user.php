@@ -53,7 +53,8 @@ if($_SESSION["auth"] === "yes"){
         <li><a href="LogPage.php" id="EOATEXT" title="Takes you to the login page"><i  class="fas fa-sign-in-alt"></i>Login </a></li>
         <li><a href="AboutPage.php" title="Takes you to the login page">About</a></li>
         <li title="This button changes css file" id="csschange"><a href="" id="EOATEXT"   onclick="EaseCookieManNew();"> Ease of access </a> </li>
-        <?php if($_SESSION["auth"] == "yes") {echo '<li><a href="user.php" >You are logged in as ' . $_SESSION["username"] . '</a></li> ' . '<li><a href="logout.php" title="Logs you out">Log out</a></li>';}?>
+        <?php if($_SESSION["auth"] === "yes") {echo '<li><a href="user.php" >You are logged in as ' . $_SESSION["username"] . '</a></li> ' . '<li><a href="logout.php" title="Logs you out">Log out</a></li>';}?>
+                <?php if($_SESSION["auth"] === "yes") {echo '<li><a href="AdminPage.php" >Admin Page ' . '</a></li>';} ?>
       </ul>
     </nav>
     <div id="MainInfo">
