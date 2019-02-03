@@ -29,11 +29,11 @@ if($_SESSION["auth"] === "yes"){
 
   $Cookie_Name = "EOA";
     if ($_COOKIE[$Cookie_Name] === "1") {
-        echo '<link rel="stylesheet" href="EOA.css">';
+        echo '<link rel="stylesheet" href="../css/EOAuser.css">';
 
     } else {
 
-        echo '<link rel="stylesheet" href="main.css">';
+        echo '<link rel="stylesheet" href="../css/user.css">';
     }
     ?>
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>
@@ -105,7 +105,7 @@ if($_SESSION["auth"] === "yes"){
         <article>
           <header>
             <hgroup>
-              <h1 id="EOATEXT">We are here to provide you the best service possibke</h1>
+              <h1 id="EOATEXT">We are here to provide you the best service possible</h1>
               <h2>So contact us!</h2>
             </hgroup>
           </header>

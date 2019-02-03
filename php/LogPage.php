@@ -39,11 +39,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	$Cookie_Name = "EOA";
     if ($_COOKIE[$Cookie_Name] === "1") {
-        echo '<link rel="stylesheet" href="EOA.css">';
+        echo '<link rel="stylesheet" href="../css/EOALogPage.css">';
 
     } else {
 
-        echo '<link rel="stylesheet" href="main.css">';
+        echo '<link rel="stylesheet" href="../css/LogPage.css">';
     }
 		?>
 

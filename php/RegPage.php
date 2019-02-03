@@ -35,11 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   $Cookie_Name = "EOA";
     if ($_COOKIE[$Cookie_Name] === "1") {
-        echo '<link rel="stylesheet" href="EOA.css">';
+        echo '<link rel="stylesheet" href="../css/EOARegPage.css">';
 
     } else {
 
-        echo '<link rel="stylesheet" href="main.css">';
+        echo '<link rel="stylesheet" href="../css/RegPage.css">';
     }
     ?>
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>

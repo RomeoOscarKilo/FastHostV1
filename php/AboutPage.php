@@ -29,7 +29,7 @@ $_SESSION["siteuser"] = "yes";
 
     } else {
 
-        echo '<link rel="stylesheet" href="main.css">';
+        echo '<link rel="stylesheet" href="../css/aboutPage.css">';
     }
     ?>
   <script type="text/javascript" src="../JavaScript/EaseOfAccess.js"></script>
