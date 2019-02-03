@@ -89,9 +89,9 @@ if($_SESSION["auth"] === "yes"){
 
             Old Password:<input class="submit" id="oldPass" type="password" name="oldPassword" placeholder="Old Password" />
             <br />
-            Password: <input class="submit" id="Pass" type="password" name="newPassword" placeholder="New Password" />
+            Password:<input class="submit" id="Pass" type="password" name="newPassword" placeholder="New Password" />
             <br/>
-            Confirm Password<input class="submit" id="newPass" type="password" name="newPasswordC" placeholder="Confirm New Password" />
+            Confirm Password:<input class="submit" id="newPass" type="password" name="newPasswordC" placeholder="Confirm New Password" />
             <br />
             <input class="submit" type="submit"  value="Submit">
             <p>You will be notified of any new Top level domains that are released.</p>
