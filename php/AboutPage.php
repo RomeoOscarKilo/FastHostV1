@@ -25,7 +25,7 @@ $_SESSION["siteuser"] = "yes";
   <?php
   $Cookie_Name = "EOA";
     if ($_COOKIE[$Cookie_Name] === "1") {
-        echo '<link rel="stylesheet" href="EOA.css">';
+        echo '<link rel="stylesheet" href="../css/EOAaboutPage.css">';
 
     } else {
 

@@ -9,30 +9,34 @@ html {
 }
 
 h1 {
-  font: 20px Helvetica;
-  border-bottom: solid 1px black;
-  padding-bottom: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.05em;
+  border-bottom: solid 0.01em black;
+  padding-bottom: 0.1em;
+  font-size: 1.4em;
+  color:  #FFEC3E;
 }
 
 h2 {
-  padding-top: 5px;
-  font: 14px Helvetica;
+  padding-top: 0.2em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  font-weight: lighter;
 }
-
 #EOATEXT{
 color: #FFEC3E;
 
 
 }
-li{
-  color:  #FFEC3E;
-}
 header, section, article, aside, footer, nav, ul, hgroup {
   display: block;
 }
 
-img {
+img, i {
   display: inline-block;
+}
+li{
+  color:  #FFEC3E;
 }
 
 article {
@@ -48,7 +52,7 @@ article footer {
 }
 
 ul:hover {
-  background: rgba(30, 30, 30, 1);
+  background:  rgba(30, 30, 30, 1);
 }
 
 a:hover {
@@ -56,11 +60,10 @@ a:hover {
 }
 
 a:visited, a:link {
-  color: #FFEC3E;
+    color: #FFEC3E;
 }
 
 body {
-/*  width: 100%; */
   overflow-y: auto;
   height: 100%;
   display: -webkit-box;
@@ -79,7 +82,7 @@ body {
   https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   */
   justify-content: center;
-  background-image: url("Images/background.jpg");
+  background-image: url("../Images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -97,23 +100,16 @@ body {
   -moz-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
- overflow:auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #topheader {
   background: rgba(45, 45, 45, 5);
   padding-top: 10px;
   font: 15px courier;
-  color:  #FFEC3E;
+  color: white;
   text-align: center;
-}
-#csschange{
-  position: relative;
-
-}
-#EaseButton{
-  color: #ffffff;
-  font: 15px Arial;
 }
 
 #topmenu {
@@ -121,35 +117,50 @@ body {
   background: rgba(45, 45, 45, 5);
 
 }
+
 #topmenu li {
   display: inline-block;
   list-style: none;
   padding: 5px;
-  font: 15px Helvetica ;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#csschange{
+  position: relative;
 
 }
-#MainInfo {
+
+#CentreBox {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-self: center;
-  max-width: 1000px;
+  max-width: 2000px;
+  justify-content: center;
   flex: 1;
   overflow: auto;
 }
 
-#mainsection {
+
+#SlideshowContainer {
+
+  padding: 200px 400px;
+
   flex: 1;
-  margin: 20px;
-  padding: 20px;
+
 }
 
-#sidenews {
-  border: 1px solid black;
-  width: 20%;
-  margin: 40px 0px;
-  padding: 20px;
-  background: rgba(45, 45, 45, 5);
-  color: rgb(200, 200, 200);
+h4 {
+  text-align: center;
+  padding-bottom: 10px;
+  color: #FFEC3E;
+  font-family: 'Open Sans', sans-serif;
+  white-space: nowrap;
+}
+
+#Registration {
+  color: #FFEC3E;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
 }
 
 #footer {
@@ -168,13 +179,65 @@ body {
 #news {
   border: solid 1px black;
   padding: 15px;
-  color:  #FFEC3E;
-  /*
+}
+
+#iconA{
+  padding-right: 5px;
+}
+/*
 #topmenu ul{
   text-align: center; this is for nav bar text to be in the center
 }
 */
+#team1{
+  justify-content: center;
+  display: block;
+  margin: auto;
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+  background-color: rgba(45, 45, 45, 5);
+  color: #FFEC3E;
+  border: 1px solid white;
+
 }
-i{
-  padding-right: 5px;
+
+#team2{
+
+  padding: 10px;
+  background-color: rgba(45, 45, 45, 5);
+color: #FFEC3E;
+  border: 1px solid white;
+  text-align: center;
+
+}
+#team3{
+
+  padding: 10px;
+  background-color: rgba(45, 45, 45, 5);
+  color: #FFEC3E;
+  border: 1px solid white;
+  text-align: center;
+
+}
+
+
+#teamimage2 , #teamimage , #teamimage3{
+  justify-content: center;
+  display: block;
+  margin: auto;
+  text-align: center;
+  flex: 1;
+
+
+
+}
+.imagetext{
+padding: 10px;
+border: 1px solid white;
+background-color: rgba(45, 45, 45, 5);
+color: #FFEC3E;
+
+
+
 }
