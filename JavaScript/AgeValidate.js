@@ -14,7 +14,7 @@ function validateForm(){
     return false;}                                                           // check after to make sure user pass is corrected
   password = document.forms["Registration"]["password"].value; //include some client side forced secuirty to prevent user error
   if (password.length < 5){
-    response = "Password is too short";
+    response = "Password must be more than 5 chars";
     document.getElementById("error").innerHTML=response;
     return false;}
   var username = document.forms["Registration"]["username"].value; //no 2 letter usernames
