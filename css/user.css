@@ -9,24 +9,20 @@ html {
 }
 
 h1 {
-  font: 20px Helvetica;
-  border-bottom: solid 1px black;
-  padding-bottom: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.05em;
+  border-bottom: solid 0.01em black;
+  padding-bottom: 0.1em;
+  font-size: 1.4em;
 }
 
 h2 {
-  padding-top: 5px;
-  font: 14px Helvetica;
+  padding-top: 0.2em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  font-weight: lighter;
 }
 
-#EOATEXT{
-color: #FFEC3E;
-
-
-}
-li{
-  color:  #FFEC3E;
-}
 header, section, article, aside, footer, nav, ul, hgroup {
   display: block;
 }
@@ -39,7 +35,7 @@ article {
   border: 1px solid black;
   padding: 20px;
   margin-bottom: 20px;
-  background: rgba(45, 45, 45, 5);
+  background: radial-gradient(rgba(40, 44, 255, 0.6), rgba(40, 44, 255, 1));
   color: white;
 }
 
@@ -48,7 +44,7 @@ article footer {
 }
 
 ul:hover {
-  background: rgba(30, 30, 30, 1);
+  background: rgba(56, 56, 56, 1);
 }
 
 a:hover {
@@ -56,7 +52,7 @@ a:hover {
 }
 
 a:visited, a:link {
-  color: #FFEC3E;
+  color: white;
 }
 
 body {
@@ -79,7 +75,7 @@ body {
   https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   */
   justify-content: center;
-  background-image: url("Images/background.jpg");
+  background-image: url("../Images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -90,22 +86,31 @@ body {
   /*Newer Browser support*/
   width: 100%;
   margin: 0px 0px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1;
- overflow:auto;
+  overflow-y: auto;
+  overflow-x: auto;
 }
 
 #topheader {
-  background: rgba(45, 45, 45, 5);
+  background: linear-gradient(rgba(40, 44, 255, 1) 20%, rgba(20, 22, 127, 1)) 80%;
   padding-top: 10px;
-  font: 15px courier;
+
   color: white;
   text-align: center;
 }
 #csschange{
   position: relative;
-
+  right: 0;
 }
 #EaseButton{
   color: #ffffff;
@@ -114,15 +119,15 @@ body {
 
 #topmenu {
   border-bottom: 2px solid black;
-  background: rgba(45, 45, 45, 5);
-
+  background: rgba(20, 22, 127, 1);
+  color: white;
 }
 #topmenu li {
   display: inline-block;
   list-style: none;
   padding: 5px;
-  font: 15px Helvetica ;
-
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
 }
 #MainInfo {
   display: flex;
@@ -164,7 +169,10 @@ body {
 #news {
   border: solid 1px black;
   padding: 15px;
-  color:  #FFEC3E;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
   /*
 #topmenu ul{
   text-align: center; this is for nav bar text to be in the center
@@ -173,4 +181,18 @@ body {
 }
 i{
   padding-right: 5px;
+}
+
+#reginterest ,{
+  width: 100%;
+}
+
+
+
+.submit{
+  background-color: rgba(56, 56, 56, 1);
+  color: white;
+  border: 1px solid rgba(56, 56, 56, 1);
+  font-size: 1em;
+  padding: 1px;
 }
