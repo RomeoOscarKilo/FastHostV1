@@ -128,15 +128,15 @@ function getUserToEmail($iUsername){
 }
 
 
-function checkIfInterest($iEmail){
+function checkIfInterest($iUsername){
   $password = $this->GetFilePass();
   $conn = new mysqli($this->servername, $this->username, $password , $this->dbname);
-  $stmt = $conn->prepare("SELECT * FROM registered_interest WHERE email = ?");
-  $stmt->bind_param("s" , $iEmail );
+  $stmt = $conn->prepare("SELECT * FROM registered_interest WHERE username = ?");
+  $stmt->bind_param("s" , $iUsername );
   $stmt->execute();
   $result = $stmt->get_result();
-  $retEmail = $result->fetch_object();
-  if(strcmp($retEmail , $iEmail) == 0){
+  $retUser = $result->fetch_object();
+  if(strcmp($retUser , $iUsername) == 0){
     return "exist";
   } else{return "notexist";}
   $conn->close();

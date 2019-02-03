@@ -63,19 +63,19 @@ if($_SESSION["auth"] === "yes"){
         <article>
           <header>
             <hgroup>
-              <h1 id="EOATEXT" id="Firstpost"><?php if ($user->checkIfInterest($_SESSION["username"]) === "exist"){ echo "You have already registerd an interest";}else{echo "Sign up to show interest in our brand new Top Level Domains";} ?></h1>
-              <h2>Please enter your email to register an interest</h2>
+              <h1 id="EOATEXT" id="Firstpost" class='noCopy'><?php if ($user->checkIfInterest($_SESSION["username"]) === "exist"){ echo "You have already registerd an interest";}else{echo "Sign up to show interest in our brand new Top Level Domains";} ?></h1>
+              <h2 class='noCopy'>Please enter your email to register an interest</h2>
             </hgroup>
           </header>
           <p id="EOATEXT"></p>
-<?php    if ($user->checkIfInterest($_SESSION["username"]) === "exist"){echo "You Have already registerd an interest, please check your emails regularly for further information";}else echo '<form id="reginterest" action="domainRegister.php" method="post">
+<?php    if ($user->checkIfInterest($_SESSION["username"]) === "exist"){echo "<p class='noCopy' >You Have already registerd an interest, please check your emails regularly for further information </p>";}else echo '<form id="reginterest" action="domainRegister.php" method="post">
             <input class="submit" type="submit"  value="Submit">
             <input class="submit" id="regemail" type="email" name="email" placeholder="Email" />'; ?>
-            <p>You will be notified of any new Top level domains that are released.</p>
-            <p  style="color:#FFCA00;"> <?php echo $_SESSION["regInError"]; unset($_SESSION["regInError"]);?></p>
+            <p class='noCopy'>You will be notified of any new Top level domains that are released.</p>
+            <p  style="color:black;"> <?php echo $_SESSION["regInError"]; unset($_SESSION["regInError"]);?></p>
           </form>
           <footer>
-            <p>You agree for us to send emails to you</p>
+            <p class='noCopy'>You agree for us to send emails to you</p>
           </footer>
         </article>
         <article>
