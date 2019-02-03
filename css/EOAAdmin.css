@@ -61,6 +61,7 @@ a:hover {
 
 a:visited, a:link {
   color: #FFEC3E;
+  font-size: 1.2em;
 }
 
 body {
@@ -243,6 +244,7 @@ background: rgba(45, 45, 45, 5);
 color:  #FFEC3E;
 text-decoration: underline;
 text-align: center;
+font-size: 1.2em;
 
 }
 
@@ -253,8 +255,15 @@ tr:nth-child(even){
 #tableSearch{
   text-align: center;
   align-self: center;
-  width: 100%
+  width: 100%;
+  color:  black;
+  background-color: #FFEC3E;
+  border: 1px #FFEC3E;
+  font-size: 1.2em;
+
+
 }
 #regTable {
   margin:auto;
+  font-size: 1.2em;
 }
