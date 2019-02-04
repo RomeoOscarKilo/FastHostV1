@@ -1,4 +1,7 @@
 #FastHostV1
+This project is created by Alex Seddon
+
+
 
 Any logo's , promotional content, videos listed below are not mind and belong to www.fasthost.co.uk
 I do not own these and they are used under fair use for education purpose.
