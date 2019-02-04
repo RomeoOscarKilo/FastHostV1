@@ -25,7 +25,7 @@ if( ($validation->is_empty_null($oldPass) === "true") ||  ($validation->is_empty
       failChangePass("Please make sure that the passwords match");
     }else{
       if(password_verify($oldPass , $user->getUserPassHash($_SESSION["username"]))){
-          $user->changeUserPass($user->passwordSalt($newPass) , $_SESSION["username"] );
+          $user->changeUserPass($user->passwordHash($newPass) , $_SESSION["username"] );
           $_SESSION["ChangePassError"] = "Your password has been changed";
           header("Location: user.php");
           die();
