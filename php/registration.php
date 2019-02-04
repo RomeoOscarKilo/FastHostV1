@@ -47,7 +47,7 @@ $passwordc = $validation->html_secure_input($_POST["passwordc"]);
           }else{
 
             //can safley now add user to the database
-            $user->addUser($email , $username , $user->passwordSalt($password) );
+            $user->addUser($email , $username , $user->passwordHash($password) );
             $_SESSION["JustReg"] = "yes";
             header("Location: LogPage.php?");
             die();
