@@ -95,7 +95,7 @@ if($_SESSION["auth"] === "yes"){
             <br />
             <input class="submit" type="submit"  value="Submit">
             <p>You will be notified of any new Top level domains that are released.</p>
-            <p  style="color:#FFCA00;"> <?php echo $_SESSION["ChangePassError"]; unset($_SESSION["ChangePassError"]);?></p>
+            <p  style="color:red;"> <?php echo $_SESSION["ChangePassError"]; unset($_SESSION["ChangePassError"]);?></p>
           </form>
           <footer>
             <p>Coming soon, to fasthosts product line</p>
