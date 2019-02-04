@@ -143,7 +143,7 @@ function checkIfInterest($iUsername){
 }
 
 
-function passwordSalt($passtohash){
+function passwordHash($passtohash){
   $passtohash = password_hash($passtohash , PASSWORD_DEFAULT);
   return $passtohash;
 }
