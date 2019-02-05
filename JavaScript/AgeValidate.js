@@ -1,7 +1,7 @@
 function validateForm(){
   var  response;
   var age = document.forms["Registration"]["age"].value
-  if(isNaN(age) || age <118 || age > 100){
+  if(isNaN(age) || age <18 || age > 100){
     response = "Age is invalid";
     document.getElementById("error").innerHTML=response;
     return false;}
