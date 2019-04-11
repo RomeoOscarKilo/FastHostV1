@@ -1,5 +1,5 @@
 #FastHostV1
-This project is created by Alex Seddon
+
 
 
 
